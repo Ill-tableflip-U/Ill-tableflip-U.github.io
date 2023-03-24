@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css.css">
+    <html lang="en-AU">
+    <title>page title</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="e,f">
+    <meta name="description" content="this is the content">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.6gKurnBM0XRO38sPRaCjnQHaEo?pid=ImgDet&rs=1" />
+</head>
+    <body>
+        <a href="./Guides.html" class="menulinkxy" style="z-index: 9; position: fixed;margin-left: 30%"><button style="margin-top: 0px;z-index: 9;" type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2">Guides</p></button></a>
+        <a href="./Contact.html" class="menulinkxy" style="z-index: 9; position: fixed;margin-left: 20%"><button style="margin-top: 0px;z-index: 9" type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2">Contact</p></button></a>
+        
+        <div class="bannerimage">
+            <ul>
+                
+                     
+                <input type="text"  id="search" name="Search" placeholder="Search" onkeyup="researchpages()" title="Search"></input>
+                <img src="https://cdn-icons-png.flaticon.com/128/54/54481.png" class="searchlogo" alt="Search"></img>
+        
+                
+            </ul>
+                
+        <a href="./site.html"><img class="logoimg topmenu" src="https://th.bing.com/th/id/R.6a2cacc6138177dfd129d7e327dc1060?rik=sw57rJDvOIE%2b1w&riu=http%3a%2f%2fcaps.pictures%2f200%2f1-shrek%2ffull%2fshrek-disneyscreencaps.com-39.jpg&ehk=wEf5lBJv5qBA1UUELwG2rQnWyMynHd1ayz4nVsyqDRw%3d&risl=&pid=ImgRaw&r=0" alt="Site logo"></a>
+                
+        <div id="themesel"></div>
+
+
+        <table id="PageGlobalList" style="display: none;" >
+            
+            
+            <tr>
+                
+                <td><a href="./link1.html"><button type="button" class="searchresultsel"><h2 style="margin-left: -220px;">How to sit on a chair</h2> <br> <p>A simple set of instructions teaching you to master sitting on your chair!</p></button></a></td>
+                 
+                
+            </tr>
+            <tr><td><a href="./link1.html"><button type="button" class="searchresultsel"><h2 style="margin-left: -180px;">How not get hit by a bus</h2> <br> <p style="margin-left: -80px;">The complete beginner's guide to not being hit by a bus</p></button></a></td>
+            </tr>
+
+        </table>
+            
+
+
+
+        <script>
+            function researchpages() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("search");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("PageGlobalList");
+                tr = table.getElementsByTagName("tr");
+                
+                if (input.value.length===0){
+                    table.style.display="none";
+                    table.style.backgroundColor = "rgba(0,0,0,0)";
+                    let sel = false
+                } else {
+                    let sel = true
+                    table.style.display = "block"
+                    table.style.backgroundColor = "white";
+                    table.style.boxShadow = "2px 5px 5px 2px black"
+                }
+
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            tr[i].style.marginTop
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }       
+                }
+            }
+        </script>    
+                
+                
+                
+           
+        </div>
+          
+            
+        <div id="Lmenu" >
+            <ul>
+            <li><a href="./link1.html" class="sidebarz"><button style="margin-top: -36px;"  class="menuitem menuhover" type="button"id="menuswitch1" ><img  class="menuimg1" style="margin-left: 10px;" src="https://www.notebookcheck.com/fileadmin/Notebooks/News/_nc3/Nvidia_GeForce_RTX_4090.jpg" width="70px"><p class="menuitemtext">texttwefwefw<img/></p></button></a></li>
+            <li><a href="./link2.html" class="sidebarz"><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" ><img  class="menuimg1" style="margin-left: 10px;" src="https://www.notebookcheck.com/fileadmin/Notebooks/News/_nc3/Nvidia_GeForce_RTX_4090.jpg" width="70px"><p class="menuitemtext">ttexttext<img/></p></button></a></li>
+            <li><a href="./link1.html" class="sidebarz"><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" ><img  class="menuimg1" style="margin-left: 10px;" src="https://www.notebookcheck.com/fileadmin/Notebooks/News/_nc3/Nvidia_GeForce_RTX_4090.jpg" width="70px"><p class="menuitemtext">texttextt<img/></p></button></a></li>
+            <li><a href="./link2.html" class="sidebarz"><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" ><img  class="menuimg1" style="margin-left: 10px;" src="https://www.notebookcheck.com/fileadmin/Notebooks/News/_nc3/Nvidia_GeForce_RTX_4090.jpg" width="70px"><p class="menuitemtext">texttexttext<img/></p></button></a></li>
+        
+        </ul>   
+        </div>
+        
+
+
+        
+        <h1 class="pagecontent"><br>Contact details</h1>
+        
+
+
+
+    </body>
+</html>

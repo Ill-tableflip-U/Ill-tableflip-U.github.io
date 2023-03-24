@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css.css">
+    <html lang="en-AU">
+    <title>page title</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="e,f">
+    <meta name="description" content="this is the content">
+    <meta name="author" content="Me obviously">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.6gKurnBM0XRO38sPRaCjnQHaEo?pid=ImgDet&rs=1" />
+</head>
+
+    <body class="blackwhite">
+        <style>
+            
+            /*the definers for light/dark modes*/
+
+           
+          
+            .black240a {
+                -webkit-transition: 1.5s ease;
+                transition: 0.5s ease;
+              background-color: rgb(240,240,240)
+            }
+            .a240black {
+                -webkit-transition: 1.5s ease;
+                transition: 0.5s ease;
+              background-color: rgb(50,50,50)
+              
+            }
+            .blackwhite {
+                -webkit-transition: 1.5s ease;
+                transition: 0.5s ease;
+              background-color: white;
+              color: black;
+            }
+            .whiteblack {
+                -webkit-transition: 1.5s ease;
+                transition: 0.5s ease;
+              background-color: rgb(40,40,40);
+              color: red;
+            }
+            .fullwhite {
+                -webkit-transition: 1.5s ease;
+                transition: 0.5s ease;
+              background-color: rgb(200,200,200);
+              color: black;
+            }
+            .fullblack {
+                -webkit-transition: 1.5s ease;
+                transition: 0.5s ease;
+              background-color: black;
+              color: rgb(200,200,200);
+            }
+
+
+
+          </style>
+        <div id="themesel" style="z-index: 1000;" class="black240a"><h2 style="padding-right: 100px;position: relative;font-family: themefont;">By using this website, you acknowledge the use of site essential cookies.</h2><button style="position: absolute;bottom: 0;margin-bottom: 10px;font-family: themefont;" id="acknowledge" class="blackwhite">I understand</button> 
+            <!--this it the button formatter for the light theme button-->
+            
+            <button class="themebutton" style="margin-left: 300px;" id="lightbutton">☀</button> 
+            
+            <!--this it the button formatter for the dark theme button-->
+            
+            <button class="themebutton" style="color: white;margin-left: 10px;background-color: rgb(50,50,50);" id="darkbutton">☾</button> 
+            
+        </div>
+            <a href="./Guides.html" class="menulinkxy" style="z-index: 9; position: fixed;margin-left: 30%"><button style="margin-top: 0px;z-index: 9;" type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Guides</p></button></a>
+        <a href="./Contact.html" class="menulinkxy" style="z-index: 9; position: fixed;margin-left: 20%"><button style="margin-top: 0px;z-index: 9" type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Contact</p></button></a>
+        
+        <div class="fullwhite" id="bannerimage">
+            <ul>
+                
+                     
+                <input class="blackwhite" type="text" style="font-family: themefont;" id="search" name="Search" placeholder="Search" onkeyup="researchpages()" title="Search"></input>
+                <img id="searchlogo" src="https://cdn-icons-png.flaticon.com/128/54/54481.png" class="searchlogo" alt="Search"></img>
+                <!--<img id="darksearch"  src="./image (1).png" class="searchlogo" alt="Search"></img>-->
+        
+                
+            </ul>
+                
+        <a href="./site.html"><img class="logoimg topmenu" src="https://th.bing.com/th/id/R.6a2cacc6138177dfd129d7e327dc1060?rik=sw57rJDvOIE%2b1w&riu=http%3a%2f%2fcaps.pictures%2f200%2f1-shrek%2ffull%2fshrek-disneyscreencaps.com-39.jpg&ehk=wEf5lBJv5qBA1UUELwG2rQnWyMynHd1ayz4nVsyqDRw%3d&risl=&pid=ImgRaw&r=0" alt="Site logo"></a>
+                
+
+
+
+        <table id="PageGlobalList" style="display: none;" >
+            
+            
+            <tr>
+                
+                <td><a href="./link1.html"><button type="button" class="searchresultsel"><h2 style="margin-left: -220px;">How to sit on a chair</h2> <br> <p>A simple set of instructions teaching you to master sitting on your chair!</p></button></a></td>
+                 
+                
+            </tr>
+            <tr><td><a href="./link1.html"><button type="button" class="searchresultsel"><h2 style="margin-left: -180px;">How not get hit by a bus</h2> <br> <p style="margin-left: -80px;">The complete beginner's guide to not being hit by a bus</p></button></a></td>
+            </tr>
+
+        </table>
+
+        
+        <script>
+            function researchpages() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("search");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("PageGlobalList");
+                tr = table.getElementsByTagName("tr");
+                
+                if (input.value.length===0){
+                    table.style.display="none";
+                    table.style.backgroundColor = "rgba(0,0,0,0)";
+                    let sel = false
+                } else {
+                    let sel = true
+                    table.style.display = "block"
+                    table.style.backgroundColor = "white";
+                    table.style.boxShadow = "2px 5px 5px 2px black"
+                }
+
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            tr[i].style.marginTop
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }       
+                }
+            }
+        </script>    
+                
+                
+                        
+           
+        </div>
+          
+        
+        <div style="background-color: rgb(5, 68, 104); position: fixed;margin-left: -370px;top: 96px;left: 0;width: 500px;height: 100%; padding: 20px 0;" >
+            <ul>
+                <li><button style="margin-top: -36px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="cat1()"><img  class="menuimg1" style="margin-left: 10px;" src="https://www.apexdesign.com/media/catalog/product/cache/24/image/650x650/9df78eab33525d08d6e5fb8d27136e95/t/h/thonet-no-18-bentwood-chair-genuine-european.jpg" width="70px"><p class="menuitemtext" style="font-size:xx-large;margin-left: -235px;margin-top: -90px;">Chair sitting tutorials<img/></p></button></li>
+                <li><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="cat2()"><img  class="menuimg1" style="margin-left: 10px;" src="https://www.redhat.com/sysadmin/sites/default/files/styles/full/public/2020-02/blur-bright-business-codes-207580.jpg?itok=eUyGgeea" width="70px"><p class="menuitemtext" style="font-size:x-large;">Programming Tutorials<img/></p></button></li>
+                <li><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="cat3()"><img  class="menuimg1" style="margin-left: 10px;" src="https://cdn.britannica.com/92/22392-050-148E8CC1/properties-weight-chemical-element-crystal-structure-atomic.jpg" width="70px"><p class="menuitemtext">Breathing tutorials<img/></p></button></li>
+                <li><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="cat4()"><img  class="menuimg1" style="margin-left: 10px;" src="https://i.pinimg.com/originals/36/cc/a3/36cca30c308f51f8214f748cca204164.jpg" width="70px"><p class="menuitemtext" style="font-size: x-large;">Basic computer Tutorials<img/></p></button></li>
+            
+            </ul>   
+        </div>
+        
+        <script>
+            //page jumping
+            function cat1() {
+                console.log("press")
+                
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                
+                
+            }
+            function cat2() {
+                console.log("press")
+                
+                document.body.scrollTop = 300; // For Safari
+                document.documentElement.scrollTop = 300; // For Chrome, Firefox, IE and Opera
+                
+                
+            }
+            function cat3() {
+                console.log("press")
+                
+                document.body.scrollTop = 560; // For Safari
+                document.documentElement.scrollTop = 560; // For Chrome, Firefox, IE and Opera
+                
+                
+            }
+            function cat4() {
+                console.log("press")
+                
+                document.body.scrollTop = 900; // For Safari
+                document.documentElement.scrollTop = 900; // For Chrome, Firefox, IE and Opera
+                
+                
+            }
+            //light/dark transitioning
+            const banner = document.getElementById("bannerimage")
+            const popup1 = document.getElementById("themesel");
+            const agreementswitch = document.getElementById("acknowledge")
+            const darkbutton = document.getElementById("darkbutton")
+            const searchlogo = document.getElementById("searchlogo")
+            darkbutton.addEventListener('click', () => {
+                popup1.className = 'a240black'
+                popup1.classList.remove("black240a")
+                console.log("added dark mode")
+                document.body.className = "whiteblack"
+                document.body.classList.remove("blackwhite")
+                agreementswitch.className = "whiteblack"
+                agreementswitch.classList.remove("blackwhite")
+                banner.className = "fullblack"
+                banner.classList.remove("fullwhite")
+                const elements = document.querySelectorAll('.topmenulink');
+                elements.forEach(element => {
+                    element.classList.remove('fullwhite');
+                    element.className = "fullblack topmenu topmenulink"
+                });
+                const search = document.getElementById("search")
+                search.classList.remove('blackwhite')
+                search.className = "whiteblack"
+                searchlogo.src = "./img.png"
+                
+            });
+            lightbutton.addEventListener('click', () => {
+                popup1.className = 'black240a'
+                popup1.classList.remove("a240black")
+                console.log("added light mode")
+                document.body.className = "blackwhite"
+                document.body.classList.remove("whiteblack")
+                agreementswitch.className = "blackwhite"
+                agreementswitch.classList.remove("whiteblack")
+                banner.className = "fullwhite"
+                banner.classList.remove("fullblack")
+                const elements = document.querySelectorAll('.topmenulink');
+                elements.forEach(element => {
+                    element.classList.remove('fullblack');
+                    element.className = "fullwhite topmenu topmenulink"
+                });
+                const search = document.getElementById("search")
+                search.classList.remove('whiteblack')
+                search.className = "blackwhite"
+                searchlogo.src = "./img2.png"
+            });
+        </script>
+
+        
+  
+
+
+
+
+    <table id="Guidelist" class="pagecontent" style="display: inline-block;margin-left: 300px;"></table>
+        <tr>
+            <td style="margin-left: 650px;"> <h1 class="pagecontentstatic">Chair sitting tutorials</h1></td>
+            <td>
+                <table class="listofguides" >
+                    <tr style="margin-left: 300px;">
+                        <a href="link1.html" style="margin-left: 150px;"><button class="guidebutton">
+                        <h2>how to sit on a chair</h2>
+                        <h4>Helps you to understand chair sitting</h4>
+                        <img style="width: 80px;" src="https://www.apexdesign.com/media/catalog/product/cache/24/image/650x650/9df78eab33525d08d6e5fb8d27136e95/t/h/thonet-no-18-bentwood-chair-genuine-european.jpg" alt="chair">
+                    </button></a></tr>
+
+                    <tr style="margin-left: 300px;">
+                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <h2>how not to sit on a chair</h2>
+                        <h4>Helps you to understand not chair sitting</h4>
+                        <img style="width: 80px;" src="https://www.everythingid.com.au/cache/7d/7dfb08252be2750e49cb1a6bf9ad7b6a4efccf45_960x960_fwb.webp?_=1675199152" alt="chair">
+                    </button></a></tr>
+                    <tr style="margin-left: 300px;">
+                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <h2>chair sitting dangers</h2>
+                        <h4>Helps you to understand the chair sitting dangers ⚠️</h4>
+                        <img style="width: 80px;" src="https://www.everythingid.com.au/cache/7d/7dfb08252be2750e49cb1a6bf9ad7b6a4efccf45_960x960_fwb.webp?_=1675199152" alt="chair">
+                    </button></a></tr>
+                </table>
+            </td>
+        </tr>
+        <!--new <tr> object for each category-->
+        <tr>
+            <td style="margin-left: 650px;"> <h1 class="pagecontentstatic">Programming tutorials</h1></td>
+            <td>
+                <table class="listofguides" >
+                    <tr style="margin-left: 300px;">
+                        <a href="link1.html" style="margin-left: 150px;"><button class="guidebutton">
+                        <h2>how to program HTML</h2> 
+                        <h4>Helps you with very basic HTML (99% fail)</h4>
+                        <img style="width: 80px;" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="HTML logo">
+                    </button></a></tr>
+
+                    <tr style="margin-left: 300px;">
+                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <h2>how to do javascript</h2>
+                        <h4>Haha you'll never understnd <i>this, </i>you're far too noob lol</h4>
+                        <img style="width: 80px;" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JS logo">
+                    </button></a></tr>
+                </table>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td style="margin-left: 650px;"> <h1 class="pagecontentstatic">Breathing tutorials</h1></td>
+            <td>
+                <table class="listofguides" >
+                    <tr style="margin-left: 300px;">
+                        <a href="link1.html" style="margin-left: 150px;"><button class="guidebutton">
+                        <h2>The dangers of breathing ⚠️</h2> 
+                        <h4>READ BEFORE BREATHING (very important do not breath until you read this)</h4>
+                        <img style="width: 80px;" src="https://cdn.britannica.com/92/22392-050-148E8CC1/properties-weight-chemical-element-crystal-structure-atomic.jpg" alt="O2 symbol">
+                    </button></a></tr>
+
+                    <tr style="margin-left: 300px;">
+                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <h2>how to breath in</h2>
+                        <h4>1 step guide on how to breath in</h4>
+                        <img style="width: 80px;" src="https://cdn.britannica.com/92/22392-050-148E8CC1/properties-weight-chemical-element-crystal-structure-atomic.jpg" alt="breathing">
+                    </button></a></tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="margin-left: 650px;"> <h1 class="pagecontentstatic">Basic Computer tutorials</h1></td>
+            <td>
+                <table class="listofguides" >
+                    <tr style="margin-left: 300px;">
+                        <a href="link1.html" style="margin-left: 150px;"><button class="guidebutton">
+                        <h2>How to use a computer mouse (very basic tutorial)</h2> 
+                        <h4>Failed tutorial, no one is smart enough as you need at least 0.1 IQ</h4>
+                        <img style="width: 80px;" src="https://www.carbil-computers.com.au/wp-content/uploads/2019/08/HP-optical-mouse.jpg" alt="O2 symbol">
+                    </button></a></tr>
+
+                    <tr style="margin-left: 300px;">
+                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <h2>How to use a computer keyboard (also very basic tutorial)</h2>
+                        <h4>Also failed tutorial, no one is smart enough as you need at least 0.1 IQ</h4>
+                        <img style="width: 240px;" src="https://www.computerhope.com/cdn/keyboard/alt.jpg" alt="breathing">
+                    </button></a></tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+            
+
+        
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+
+
+
+    <script>
+        //cookie <script>ing
+        document.cookie = "property=testing"
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        console.log("cookie."+getCookie("property"))
+        
+
+
+        function wipenotice(){
+            document.getElementById(                                                                                    )
+        }
+   </script>
+    </body>
+</html>

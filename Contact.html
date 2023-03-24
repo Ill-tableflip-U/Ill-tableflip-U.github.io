@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css.css">
+    <html lang="en-AU">
+    <title>page title</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="e,f">
+    <meta name="description" content="this is the content">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.6gKurnBM0XRO38sPRaCjnQHaEo?pid=ImgDet&rs=1" />
+</head>
+    <body style="background-size: 100%; background-attachment: fixed; background-image: url(https://th.bing.com/th/id/R.ddaaaa6732a3075cea29b50d52bfa760?rik=FaM3R94bpXAg%2bw&riu=http%3a%2f%2f104.244.122.169%2f~diylogodesigns%2fwp-content%2fuploads%2f2017%2f07%2fkfc-logo-vector-1.png&ehk=y9fhG2v47zMupLH4eM6XPWBHEl7VvFLY56HFaTYK5%2bs%3d&risl=&pid=ImgRaw&r=0);">
+        <a href="./Guides.html" class="menulinkxy" style="z-index: 9; position: fixed;margin-left: 30%"><button style="margin-top: 0px;z-index: 9;" type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2">Guides</p></button></a>
+        <a href="./Contact.html" class="menulinkxy" style="z-index: 9; position: fixed;margin-left: 20%"><button style="margin-top: 0px;z-index: 9" type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2">Contact</p></button></a>
+        
+
+
+
+        
+        <div class="bannerimage" style="float: top;">
+            <ul>
+                
+                     
+                <input type="text"  id="search" name="Search" placeholder="Search" onkeyup="researchpages()" title="Search"></input>
+                <img src="https://cdn-icons-png.flaticon.com/128/54/54481.png" class="searchlogo" alt="Search"></img>
+        
+                
+            </ul>
+                
+        <a href="./site.html"><img class="logoimg topmenu" src="https://th.bing.com/th/id/R.6a2cacc6138177dfd129d7e327dc1060?rik=sw57rJDvOIE%2b1w&riu=http%3a%2f%2fcaps.pictures%2f200%2f1-shrek%2ffull%2fshrek-disneyscreencaps.com-39.jpg&ehk=wEf5lBJv5qBA1UUELwG2rQnWyMynHd1ayz4nVsyqDRw%3d&risl=&pid=ImgRaw&r=0" alt="Site logo"><a>
+                
+
+
+
+        <table id="PageGlobalList" style="display: none;" >
+            
+            
+            <tr>
+                
+                <td><a href="./link1.html"><button type="button" class="searchresultsel"><h2 style="margin-left: -220px;">How to sit on a chair</h2> <br> <p>A simple set of instructions teaching you to master sitting on your chair!</p></button></a></td>
+                 
+                
+            </tr>
+            <tr><td><a href="./link1.html"><button type="button" class="searchresultsel"><h2 style="margin-left: -180px;">How not get hit by a bus</h2> <br> <p style="margin-left: -80px;">The complete beginner's guide to not being hit by a bus</p></button></a></td>
+            </tr>
+
+        </table>
+            
+
+
+
+        <script>
+            function researchpages() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("search");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("PageGlobalList");
+                tr = table.getElementsByTagName("tr");
+                
+                if (input.value.length===0){
+                    table.style.display="none";
+                    table.style.backgroundColor = "rgba(0,0,0,0)";
+                    let sel = false
+                } else {
+                    let sel = true
+                    table.style.display = "block"
+                    table.style.backgroundColor = "white";
+                    table.style.boxShadow = "2px 5px 5px 2px black"
+                }
+
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            tr[i].style.marginTop
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }       
+                }
+            }
+        </script>    
+                
+                
+                
+           
+        </div>
+          
+      
+       
+        
+
+    
+        <h1 class="pagecontent"><br>Contact details</h1>
+        
+        <h3 class="pagecontent" style="margin-top: -80px;"><img src="https://cdn.onlinewebfonts.com/svg/img_190120.png" alt="email icon" width="40px"> <a style="color: black;" href="mailto:email@website.com">email@website.com</a></h3>
+        <h3 class="pagecontent" style="margin-top: -80px;"><img src="https://th.bing.com/th/id/R.8ec2e6e15918cbdad8db28d675c945b2?rik=BNZ8QLkVSEILTg&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_79855.png&ehk=dVMc0SWsoc24HwdnvIvjV0tUYzfc9Y2BlIjcVSM35Uk%3d&risl=&pid=ImgRaw&r=0" alt="Phone icon" width="40px"><a style="color: black;" href="tel:61412345678">0412345678</a>+</h3>
+        
+        <iframe class="pagecontent" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.5179426774644!2d149.04008055140997!3d-35.243368299033776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b17ad882c588205%3A0xc006bec221a0a377!2sKFC%20Hawker!5e0!3m2!1sen!2sau!4v1678785794619!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        
+
+
+
+    </body>
+</html>
