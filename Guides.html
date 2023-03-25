@@ -16,7 +16,17 @@
         <style>
             
             /*the definers for light/dark modes*/
-
+            .removed {
+            -webkit-transition: opacity 1.5s ease;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+            pointer-events: none;
+            }
+            .displayed {
+            -webkit-transition: opacity 1.5s ease;
+            transition: opacity 0.5s ease;
+            opacity: 1;
+            }
            
           
             .black240a {
@@ -58,7 +68,7 @@
 
 
           </style>
-        <div id="themesel" style="z-index: 1000;" class="black240a"><h2 style="padding-right: 100px;position: relative;font-family: themefont;">By using this website, you acknowledge the use of site essential cookies.</h2><button style="position: absolute;bottom: 0;margin-bottom: 10px;font-family: themefont;" id="acknowledge" class="blackwhite">I understand</button> 
+        <div id="themesel" style="z-index: 1000;" class="black240a displayed"><h2 style="padding-right: 100px;position: relative;font-family: themefont;">By using this website, you acknowledge the use of site essential cookies.</h2><button  style="position: absolute;bottom: 0;margin-bottom: 10px;font-family: themefont;" id="acknowledge" class="blackwhite" >I understand</button> 
             <!--this it the button formatter for the light theme button-->
             
             <button class="themebutton" style="margin-left: 300px;" id="lightbutton">☀</button> 
@@ -144,55 +154,44 @@
         
         <div style="background-color: rgb(5, 68, 104); position: fixed;margin-left: -370px;top: 96px;left: 0;width: 500px;height: 100%; padding: 20px 0;" >
             <ul>
-                <li><button style="margin-top: -36px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="cat1()"><img  class="menuimg1" style="margin-left: 10px;" src="https://www.apexdesign.com/media/catalog/product/cache/24/image/650x650/9df78eab33525d08d6e5fb8d27136e95/t/h/thonet-no-18-bentwood-chair-genuine-european.jpg" width="70px"><p class="menuitemtext" style="font-size:xx-large;margin-left: -235px;margin-top: -90px;">Chair sitting tutorials<img/></p></button></li>
-                <li><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="cat2()"><img  class="menuimg1" style="margin-left: 10px;" src="https://www.redhat.com/sysadmin/sites/default/files/styles/full/public/2020-02/blur-bright-business-codes-207580.jpg?itok=eUyGgeea" width="70px"><p class="menuitemtext" style="font-size:x-large;">Programming Tutorials<img/></p></button></li>
-                <li><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="cat3()"><img  class="menuimg1" style="margin-left: 10px;" src="https://cdn.britannica.com/92/22392-050-148E8CC1/properties-weight-chemical-element-crystal-structure-atomic.jpg" width="70px"><p class="menuitemtext">Breathing tutorials<img/></p></button></li>
-                <li><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="cat4()"><img  class="menuimg1" style="margin-left: 10px;" src="https://i.pinimg.com/originals/36/cc/a3/36cca30c308f51f8214f748cca204164.jpg" width="70px"><p class="menuitemtext" style="font-size: x-large;">Basic computer Tutorials<img/></p></button></li>
+                <li><button style="margin-top: -36px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="scrollToElement('subtitle1',110)"><img  class="menuimg1" style="margin-left: 10px;" src="https://www.apexdesign.com/media/catalog/product/cache/24/image/650x650/9df78eab33525d08d6e5fb8d27136e95/t/h/thonet-no-18-bentwood-chair-genuine-european.jpg" width="70px"><p class="menuitemtext" style="font-size:xx-large;margin-left: -235px;margin-top: -90px;">Chair sitting tutorials<img/></p></button></li>
+                <li><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="scrollToElement('subtitle2',110)"><img  class="menuimg1" style="margin-left: 10px;" src="https://www.redhat.com/sysadmin/sites/default/files/styles/full/public/2020-02/blur-bright-business-codes-207580.jpg?itok=eUyGgeea" width="70px"><p class="menuitemtext" style="font-size:x-large;">Programming Tutorials<img/></p></button></li>
+                <li><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="scrollToElement('subtitle3',110)"><img  class="menuimg1" style="margin-left: 10px;" src="https://cdn.britannica.com/92/22392-050-148E8CC1/properties-weight-chemical-element-crystal-structure-atomic.jpg" width="70px"><p class="menuitemtext">Breathing tutorials<img/></p></button></li>
+                <li><button style="margin-top: 0px;"  class="menuitem menuhover" type="button"id="menuswitch1" onclick="scrollToElement('subtitle4',110)"><img  class="menuimg1" style="margin-left: 10px;" src="https://i.pinimg.com/originals/36/cc/a3/36cca30c308f51f8214f748cca204164.jpg" width="70px"><p class="menuitemtext" style="font-size: x-large;">Basic computer Tutorials<img/></p></button></li>
             
             </ul>   
         </div>
         
         <script>
+            function scrollToElement(id, offset) {
+                var element = document.getElementById(id);
+                var position = element.offsetTop - offset;
+                window.scrollTo({ top: position, behavior: 'smooth' });
+            }
+
+
+            function closewindow(){
+                console.log("closepopup1")
+                const divwin = document.getElementById("themesel")
+                themesel.style.backgroundColor = "blue"
+                
+            }
+
+
             //page jumping
-            function cat1() {
-                console.log("press")
+
+    
+           
                 
-                document.body.scrollTop = 0; // For Safari
-                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-                
-                
-            }
-            function cat2() {
-                console.log("press")
-                
-                document.body.scrollTop = 300; // For Safari
-                document.documentElement.scrollTop = 300; // For Chrome, Firefox, IE and Opera
-                
-                
-            }
-            function cat3() {
-                console.log("press")
-                
-                document.body.scrollTop = 560; // For Safari
-                document.documentElement.scrollTop = 560; // For Chrome, Firefox, IE and Opera
-                
-                
-            }
-            function cat4() {
-                console.log("press")
-                
-                document.body.scrollTop = 900; // For Safari
-                document.documentElement.scrollTop = 900; // For Chrome, Firefox, IE and Opera
-                
-                
-            }
+            
             //light/dark transitioning
             const banner = document.getElementById("bannerimage")
             const popup1 = document.getElementById("themesel");
             const agreementswitch = document.getElementById("acknowledge")
             const darkbutton = document.getElementById("darkbutton")
             const searchlogo = document.getElementById("searchlogo")
-            darkbutton.addEventListener('click', () => {
+
+            function darkchange(){
                 popup1.className = 'a240black'
                 popup1.classList.remove("black240a")
                 console.log("added dark mode")
@@ -212,8 +211,13 @@
                 search.className = "whiteblack"
                 searchlogo.src = "./img.png"
                 
+            }
+
+            darkbutton.addEventListener('click', () => {
+                darkchange()
             });
-            lightbutton.addEventListener('click', () => {
+
+            function lightchange(){
                 popup1.className = 'black240a'
                 popup1.classList.remove("a240black")
                 console.log("added light mode")
@@ -232,6 +236,31 @@
                 search.classList.remove('whiteblack')
                 search.className = "blackwhite"
                 searchlogo.src = "./img2.png"
+            }
+
+
+
+            lightbutton.addEventListener('click', () => {
+                lightchange()
+            });
+             
+            const ack = document.getElementById("acknowledge")
+            ack.addEventListener('click', () => {
+                var style = window.getComputedStyle(agreementswitch);
+                var bgColor = style.getPropertyValue('background-color');
+                if (bgColor ==="black"){
+                    document.cookie = "theme=dark"
+                    console.log("displcookie dark")
+                }else{
+                    if(bgColor==="white"){
+                        document.cookie = "theme=light"
+                        console.log("displcookie light")
+                    }else{console.log("failed theme cookies")}
+                }
+                
+                console.log("ack+")
+                popup1.classList.remove("displayed")
+                popup1.classList.add("removed")
             });
         </script>
 
@@ -241,26 +270,26 @@
 
 
 
-    <table id="Guidelist" class="pagecontent" style="display: inline-block;margin-left: 300px;"></table>
+    <table id="Guidelist" class="pagecontent" style="display: inline-block;padding-left: 600px;"></table>
         <tr>
-            <td style="margin-left: 650px;"> <h1 class="pagecontentstatic">Chair sitting tutorials</h1></td>
+            <td style="margin-left: 650px;"> <h1 id="subtitle1" class="pagecontentstatic">Chair sitting tutorials</h1></td>
             <td>
                 <table class="listofguides" >
-                    <tr style="margin-left: 300px;">
-                        <a href="link1.html" style="margin-left: 150px;"><button class="guidebutton">
+                    <tr > 
+                        <a href="link1.html" class="anchorlink" style="margin-left: 150px;"><button class="guidebutton" >
                         <h2>how to sit on a chair</h2>
                         <h4>Helps you to understand chair sitting</h4>
                         <img style="width: 80px;" src="https://www.apexdesign.com/media/catalog/product/cache/24/image/650x650/9df78eab33525d08d6e5fb8d27136e95/t/h/thonet-no-18-bentwood-chair-genuine-european.jpg" alt="chair">
                     </button></a></tr>
 
                     <tr style="margin-left: 300px;">
-                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <a href="link1.html" class="anchorlink" style="margin-left: 2%;"><button class="guidebutton">
                         <h2>how not to sit on a chair</h2>
                         <h4>Helps you to understand not chair sitting</h4>
                         <img style="width: 80px;" src="https://www.everythingid.com.au/cache/7d/7dfb08252be2750e49cb1a6bf9ad7b6a4efccf45_960x960_fwb.webp?_=1675199152" alt="chair">
                     </button></a></tr>
                     <tr style="margin-left: 300px;">
-                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <a href="link1.html" class="anchorlink" style="margin-left: 150px;" ><button class="guidebutton">
                         <h2>chair sitting dangers</h2>
                         <h4>Helps you to understand the chair sitting dangers ⚠️</h4>
                         <img style="width: 80px;" src="https://www.everythingid.com.au/cache/7d/7dfb08252be2750e49cb1a6bf9ad7b6a4efccf45_960x960_fwb.webp?_=1675199152" alt="chair">
@@ -270,18 +299,18 @@
         </tr>
         <!--new <tr> object for each category-->
         <tr>
-            <td style="margin-left: 650px;"> <h1 class="pagecontentstatic">Programming tutorials</h1></td>
+            <td style="margin-left: 650px;"> <h1 id="subtitle2" class="pagecontentstatic">Programming tutorials</h1></td>
             <td>
                 <table class="listofguides" >
                     <tr style="margin-left: 300px;">
-                        <a href="link1.html" style="margin-left: 150px;"><button class="guidebutton">
+                        <a href="link1.html" class="anchorlink" style="margin-left: 150px;"><button class="guidebutton">
                         <h2>how to program HTML</h2> 
                         <h4>Helps you with very basic HTML (99% fail)</h4>
                         <img style="width: 80px;" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="HTML logo">
                     </button></a></tr>
 
                     <tr style="margin-left: 300px;">
-                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <a href="link1.html" class="anchorlink" ><button class="guidebutton">
                         <h2>how to do javascript</h2>
                         <h4>Haha you'll never understnd <i>this, </i>you're far too noob lol</h4>
                         <img style="width: 80px;" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JS logo">
@@ -293,18 +322,18 @@
 
 
         <tr>
-            <td style="margin-left: 650px;"> <h1 class="pagecontentstatic">Breathing tutorials</h1></td>
+            <td style="margin-left: 650px;"> <h1 id="subtitle3" class="pagecontentstatic">Breathing tutorials</h1></td>
             <td>
                 <table class="listofguides" >
                     <tr style="margin-left: 300px;">
-                        <a href="link1.html" style="margin-left: 150px;"><button class="guidebutton">
+                        <a href="link1.html" class="anchorlink" style="margin-left: 150px;"><button class="guidebutton">
                         <h2>The dangers of breathing ⚠️</h2> 
                         <h4>READ BEFORE BREATHING (very important do not breath until you read this)</h4>
                         <img style="width: 80px;" src="https://cdn.britannica.com/92/22392-050-148E8CC1/properties-weight-chemical-element-crystal-structure-atomic.jpg" alt="O2 symbol">
                     </button></a></tr>
 
                     <tr style="margin-left: 300px;">
-                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <a href="link1.html" class="anchorlink" ><button class="guidebutton">
                         <h2>how to breath in</h2>
                         <h4>1 step guide on how to breath in</h4>
                         <img style="width: 80px;" src="https://cdn.britannica.com/92/22392-050-148E8CC1/properties-weight-chemical-element-crystal-structure-atomic.jpg" alt="breathing">
@@ -314,18 +343,18 @@
         </tr>
 
         <tr>
-            <td style="margin-left: 650px;"> <h1 class="pagecontentstatic">Basic Computer tutorials</h1></td>
+            <td style="margin-left: 650px;"> <h1 id="subtitle4" class="pagecontentstatic">Basic Computer tutorials</h1></td>
             <td>
                 <table class="listofguides" >
                     <tr style="margin-left: 300px;">
-                        <a href="link1.html" style="margin-left: 150px;"><button class="guidebutton">
+                        <a href="link1.html" class="anchorlink" style="margin-left: 150px;"><button class="guidebutton">
                         <h2>How to use a computer mouse (very basic tutorial)</h2> 
                         <h4>Failed tutorial, no one is smart enough as you need at least 0.1 IQ</h4>
                         <img style="width: 80px;" src="https://www.carbil-computers.com.au/wp-content/uploads/2019/08/HP-optical-mouse.jpg" alt="O2 symbol">
                     </button></a></tr>
 
                     <tr style="margin-left: 300px;">
-                        <a href="link1.html" style="margin-left: 2%;"><button class="guidebutton">
+                        <a href="link1.html" class="anchorlink longitem"><button class="guidebutton">
                         <h2>How to use a computer keyboard (also very basic tutorial)</h2>
                         <h4>Also failed tutorial, no one is smart enough as you need at least 0.1 IQ</h4>
                         <img style="width: 240px;" src="https://www.computerhope.com/cdn/keyboard/alt.jpg" alt="breathing">
@@ -345,7 +374,7 @@
 
     <script>
         //cookie <script>ing
-        document.cookie = "property=testing"
+        
         function getCookie(cname) {
             let name = cname + "=";
             let decodedCookie = decodeURIComponent(document.cookie);
@@ -361,13 +390,11 @@
             }
             return "";
         }
-        console.log("cookie."+getCookie("property"))
-        
-
-
-        function wipenotice(){
-            document.getElementById(                                                                                    )
+        let themecookie = getCookie("theme")
+        if (themecookie==='dark'){
+            //theme is defined
+            darkchange()
         }
-   </script>
+       </script>
     </body>
 </html>
