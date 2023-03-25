@@ -17,7 +17,7 @@
   height: 80px;
   position: fixed;
   left: 45%;
-  margin-top: -70px;
+  margin-top: -75px;
   
   display: inline-block;
 
@@ -160,7 +160,9 @@ border-bottom: 0px solid blue;
   #search{
     width: 150px;
   }
-  
+  .longitem{
+    margin-left: 250px;
+  }
 }
 
 @media only screen and (max-width: 1600px) {
@@ -170,8 +172,13 @@ border-bottom: 0px solid blue;
   
 }
 
-
-
+@media only screen and (max-width: 900px) {
+  .anchorlink{
+    margin-left: 120px;
+  }
+  
+}
+/*.anchorlink and .longitem are overlapping, leaving .longitem not working*/
 #homeb{
   margin-top: -205px;
   width: 80px;
@@ -185,9 +192,10 @@ border-bottom: 0px solid blue;
 }
 
 .searchlogo{
+  
   width:30px;
   margin-left: 94.5%;
-  margin-top: 25px;
+  margin-top: 30px;
   z-index: 13;
   content: "";
 }
@@ -198,10 +206,10 @@ border-bottom: 0px solid blue;
   width: 500px;
   
 }
-
-.listofguides{
-  padding-right: -200px;
+.longitem{
+  margin-left: 150px;
 }
+
 .searchresultsel{
   padding-bottom: 20px;
   width: 490px;
@@ -250,7 +258,8 @@ transition: 0.5s ease;
 }
 
 .guidebutton{
-  
+  margin-left: 20px;
+  margin-top: 20px;
   border-radius: 10px;
   -webkit-transition: 1.5s ease;
   transition: 0.5s ease;
@@ -315,6 +324,3 @@ transition: 0.5s ease;
     font-size: xx-large;
 }
 
-#darksearch{
-  margin-top: -90px;
-}
