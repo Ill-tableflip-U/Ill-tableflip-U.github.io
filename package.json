@@ -1,5 +1,21 @@
 {
+  "name": "html283",
+  "version": "1.0.0",
+  "main": "Cart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
-    "requirejs": "^2.3.6"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-openid-connect": "^2.15.0",
+    "http": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "stripe": "^12.3.0"
   }
 }

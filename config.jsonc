@@ -1,0 +1,21 @@
+
+
+
+
+
+{
+
+    //lists ofthe items in groups
+    "GuideTitles": ["item1", "item2", "item3"],
+    "GuideDescriptions": ["item4", "item5", "item6"],
+    "GuideLinks": ["item7", "item8", "item9"],
+    "GuideImages":[],
+
+    "CategoryIndex":[1,2,3],
+
+
+    "GuideCategories": ["item7", "item8", "item9"]
+
+    
+
+  }

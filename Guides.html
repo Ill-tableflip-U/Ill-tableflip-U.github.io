@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "gqfhg71lrz");
+  </script>
     <link rel="stylesheet" href="css.css">
     <html lang="en-AU">
     <title>page title</title>
@@ -63,6 +70,7 @@
                 transition: 0.5s ease;
               background-color: black;
               color: rgb(200,200,200);
+              color: red;
             }
 
 
@@ -78,9 +86,20 @@
             <button class="themebutton" style="color: white;margin-left: 10px;background-color: rgb(50,50,50);" id="darkbutton">☾</button> 
             
         </div>
-            <a href="./Guides.html" class="menulinkxy" style="z-index: 9; position: fixed;margin-left: 30%"><button style="margin-top: 0px;z-index: 9;" type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Guides</p></button></a>
-        <a href="./Contact.html" class="menulinkxy" style="z-index: 9; position: fixed;margin-left: 20%"><button style="margin-top: 0px;z-index: 9" type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Contact</p></button></a>
+            <a href="/Guides.html" class="menulinkxy" style="margin-left: 30%"><button  type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Guides</p></button></a>
+        <a href="/Contact.html" class="menulinkxy" style="margin-left: 20%"><button  type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">About us</p></button></a>
+        <a href="/shop.html" class="menulinkxy" style="margin-left: 60%"><button  type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Shop</p></button></a>
+        <button type="button" id="accountoptions" class="topmenu topmenulink">
+          <div class='fullwhite' id="accountoptionspopup">
+            <a href="./dashboard.html" class="fullwhite backlinks"><br>Dashboard<br><br></a>
+            <a id="login" class="fullwhite backlinks"><br>Log in<br><br></a>
+            
+          </div>
+          <p id="greeting">Account</p>
+        </button>
         
+        <!--button id="login" class="pagecontent pagecontentstatic">.</button>
+        <button id="logout" class="pagecontent pagecontentstatic">.</button></button>-->
         <div class="fullwhite" id="bannerimage">
             <ul>
                 
@@ -92,59 +111,19 @@
                 
             </ul>
                 
-        <a href="./site.html"><img class="logoimg topmenu" src="https://th.bing.com/th/id/R.6a2cacc6138177dfd129d7e327dc1060?rik=sw57rJDvOIE%2b1w&riu=http%3a%2f%2fcaps.pictures%2f200%2f1-shrek%2ffull%2fshrek-disneyscreencaps.com-39.jpg&ehk=wEf5lBJv5qBA1UUELwG2rQnWyMynHd1ayz4nVsyqDRw%3d&risl=&pid=ImgRaw&r=0" alt="Site logo"></a>
-                
+        <a href="/"><img class="logoimg topmenu" src="https://th.bing.com/th/id/R.6a2cacc6138177dfd129d7e327dc1060?rik=sw57rJDvOIE%2b1w&riu=http%3a%2f%2fcaps.pictures%2f200%2f1-shrek%2ffull%2fshrek-disneyscreencaps.com-39.jpg&ehk=wEf5lBJv5qBA1UUELwG2rQnWyMynHd1ayz4nVsyqDRw%3d&risl=&pid=ImgRaw&r=0" alt="Site logo"></a>
+        
 
 
-
-        <table id="PageGlobalList" style="display: none;" >
+        <table class="" style="display: none;margin-top: 45px;"  id="PageGlobalList"  >
+            <tbody id="pagelistbody">
             
-            
-            <tr>
-                
-                <td><a href="./link1.html"><button type="button" class="searchresultsel"><h2 style="margin-left: -220px;">How to sit on a chair</h2> <br> <p>A simple set of instructions teaching you to master sitting on your chair!</p></button></a></td>
-                 
-                
-            </tr>
-            <tr><td><a href="./link1.html"><button type="button" class="searchresultsel"><h2 style="margin-left: -180px;">How not get hit by a bus</h2> <br> <p style="margin-left: -80px;">The complete beginner's guide to not being hit by a bus</p></button></a></td>
-            </tr>
-
+        </tbody>
         </table>
 
+        <ul id="jsondata" style="margin-top: 200px;"></ul>
+        <script src="EmbeddedSharedFunctions.js"></script>  
         
-        <script>
-            function researchpages() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("search");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("PageGlobalList");
-                tr = table.getElementsByTagName("tr");
-                
-                if (input.value.length===0){
-                    table.style.display="none";
-                    table.style.backgroundColor = "rgba(0,0,0,0)";
-                    let sel = false
-                } else {
-                    let sel = true
-                    table.style.display = "block"
-                    table.style.backgroundColor = "white";
-                    table.style.boxShadow = "2px 5px 5px 2px black"
-                }
-
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[0];
-                    if (td) {
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                            tr[i].style.marginTop
-                        } else {
-                            tr[i].style.display = "none";
-                        }
-                    }       
-                }
-            }
-        </script>    
                 
                 
                         
@@ -161,114 +140,7 @@
             
             </ul>   
         </div>
-        
-        <script>
-            function scrollToElement(id, offset) {
-                var element = document.getElementById(id);
-                var position = element.offsetTop - offset;
-                window.scrollTo({ top: position, behavior: 'smooth' });
-            }
-
-
-            function closewindow(){
-                console.log("closepopup1")
-                const divwin = document.getElementById("themesel")
-                themesel.style.backgroundColor = "blue"
-                
-            }
-
-
-            //page jumping
-
-    
-           
-                
-            
-            //light/dark transitioning
-            const banner = document.getElementById("bannerimage")
-            const popup1 = document.getElementById("themesel");
-            const agreementswitch = document.getElementById("acknowledge")
-            const darkbutton = document.getElementById("darkbutton")
-            const searchlogo = document.getElementById("searchlogo")
-
-            function darkchange(){
-                popup1.className = 'a240black'
-                popup1.classList.remove("black240a")
-                console.log("added dark mode")
-                document.body.className = "whiteblack"
-                document.body.classList.remove("blackwhite")
-                agreementswitch.className = "whiteblack"
-                agreementswitch.classList.remove("blackwhite")
-                banner.className = "fullblack"
-                banner.classList.remove("fullwhite")
-                const elements = document.querySelectorAll('.topmenulink');
-                elements.forEach(element => {
-                    element.classList.remove('fullwhite');
-                    element.className = "fullblack topmenu topmenulink"
-                });
-                const search = document.getElementById("search")
-                search.classList.remove('blackwhite')
-                search.className = "whiteblack"
-                searchlogo.src = "./img.png"
-                
-            }
-
-            darkbutton.addEventListener('click', () => {
-                darkchange()
-            });
-
-            function lightchange(){
-                popup1.className = 'black240a'
-                popup1.classList.remove("a240black")
-                console.log("added light mode")
-                document.body.className = "blackwhite"
-                document.body.classList.remove("whiteblack")
-                agreementswitch.className = "blackwhite"
-                agreementswitch.classList.remove("whiteblack")
-                banner.className = "fullwhite"
-                banner.classList.remove("fullblack")
-                const elements = document.querySelectorAll('.topmenulink');
-                elements.forEach(element => {
-                    element.classList.remove('fullblack');
-                    element.className = "fullwhite topmenu topmenulink"
-                });
-                const search = document.getElementById("search")
-                search.classList.remove('whiteblack')
-                search.className = "blackwhite"
-                searchlogo.src = "./img2.png"
-            }
-
-
-
-            lightbutton.addEventListener('click', () => {
-                lightchange()
-            });
-             
-            const ack = document.getElementById("acknowledge")
-            ack.addEventListener('click', () => {
-                var style = window.getComputedStyle(agreementswitch);
-                var bgColor = style.getPropertyValue('background-color');
-                if (bgColor ==="black"){
-                    document.cookie = "theme=dark"
-                    console.log("displcookie dark")
-                }else{
-                    if(bgColor==="white"){
-                        document.cookie = "theme=light"
-                        console.log("displcookie light")
-                    }else{console.log("failed theme cookies")}
-                }
-                
-                console.log("ack+")
-                popup1.classList.remove("displayed")
-                popup1.classList.add("removed")
-            });
-        </script>
-
-        
-  
-
-
-
+       
 
     <table id="Guidelist" class="pagecontent" style="display: inline-block;padding-left: 600px;"></table>
         <tr>
@@ -370,31 +242,5 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     
 
-
-
-    <script>
-        //cookie <script>ing
-        
-        function getCookie(cname) {
-            let name = cname + "=";
-            let decodedCookie = decodeURIComponent(document.cookie);
-            let ca = decodedCookie.split(';');
-            for(let i = 0; i <ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-        let themecookie = getCookie("theme")
-        if (themecookie==='dark'){
-            //theme is defined
-            darkchange()
-        }
-       </script>
     </body>
 </html>

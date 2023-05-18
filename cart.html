@@ -86,9 +86,9 @@
             <button class="themebutton" style="color: white;margin-left: 10px;background-color: rgb(50,50,50);" id="darkbutton">☾</button> 
             
         </div>
-            <a href="/Guides.html" class="menulinkxy" style="margin-left: 30%"><button  type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Guides</p></button></a>
-        <a href="/Contact.html" class="menulinkxy" style="margin-left: 20%"><button  type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">About us</p></button></a>
-        <a href="/shop.html" class="menulinkxy" style="margin-left: 60%"><button  type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Shop</p></button></a>
+            <a href="./Guides.html" class="menulinkxy" style="margin-left: 30%"><button  type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Guides</p></button></a>
+        <a href="./Contact.html" class="menulinkxy" style="margin-left: 20%"><button  type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">About us</p></button></a>
+        <a href="./shop.html" class="menulinkxy" style="margin-left: 60%"><button  type="button" class="topmenu topmenulink" ><p  class="topmenutext" style="z-index: 2;font-family: themefont;">Shop</p></button></a>
         <button type="button" id="accountoptions" class="topmenu topmenulink">
           <div class='fullwhite' id="accountoptionspopup">
             <a href="./dashboard.html" class="fullwhite backlinks"><br>Dashboard<br><br></a>
@@ -114,7 +114,8 @@
         <a href="/"><img class="logoimg topmenu" src="https://th.bing.com/th/id/R.6a2cacc6138177dfd129d7e327dc1060?rik=sw57rJDvOIE%2b1w&riu=http%3a%2f%2fcaps.pictures%2f200%2f1-shrek%2ffull%2fshrek-disneyscreencaps.com-39.jpg&ehk=wEf5lBJv5qBA1UUELwG2rQnWyMynHd1ayz4nVsyqDRw%3d&risl=&pid=ImgRaw&r=0" alt="Site logo"></a>
                 
 
-     
+
+
         <table style="display: none;"  id="PageGlobalList"  >
             <tbody id="pagelistbody">
             
@@ -123,21 +124,29 @@
 
         
         <script src="EmbeddedSharedFunctions.js"></script>  
-        <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
-        <script src="auth.js"></script>       
+        <script src="Cart.js"></script>
+                
+                        
            
         </div>
           
         
-        <input type="text" spellcheck="true" class=" backlinks pagecontentstatic inputdisptext" style="margin-top: 200px;">
-        <br>
-        <button class="pagecontentstatic inputdispbutton"><p>Add +</p></button>
-        <!--!<div class="pagecontentstatic listenerAdd"></div>-->
-        <script src="https://unpkg.com/blockly/blockly.min.js"></script>
-        <div id="blocklyDiv" style="height: 480px; width: 1200px;"></div>
-        <script src="BlockSetup.js"></script>
-
-        <button onclick="generateCode()">Generate JS</button>
         
+
+        <table class="pagecontent" id="Cartitems"><tr><td>Item</td><td >Quantity</td><td style="padding-left: 20px;">Price</td></tr></table>
+        
+        <form action="/create-checkout-session" method="POST">
+          <input id="formparams" type="hidden" name="param_name" value="param_value">
+          <button type="submit" id="checkout-button">Checkout</button>
+        </form>
+        <script>
+          const cartcookies = getCookie('idquantitypairs')
+          const paybutton = document.getElementById("formparams")
+          paybutton.value = cartcookies
+        </script>
+       
+
+
     </body>
 </html>
+
