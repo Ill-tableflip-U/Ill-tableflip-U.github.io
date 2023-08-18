@@ -94,7 +94,7 @@ const searchlist = document.getElementById("PageGlobalList")
 const agreementswitch = document.getElementById("acknowledge")
 const darkbutton = document.getElementById("darkbutton")
 const searchlogo = document.getElementById("searchlogo")
-const popup2 = document.getElementById("accountoptionspopup")
+
 const backgroundlinks = document.querySelectorAll('.backlinks');
 function darkchange(){
     searchlist.className = "fullblack"
@@ -106,8 +106,7 @@ function darkchange(){
     document.body.classList.remove("blackwhite")
     agreementswitch.className = "whiteblack"
     agreementswitch.classList.remove("blackwhite")
-    popup2.className = "fullblack"
-    popup2.classList.remove("blackwhite")
+
     banner.className = "fullblack"
     banner.classList.remove("fullwhite")
     const elements = document.querySelectorAll('.topmenulink');
@@ -166,8 +165,7 @@ function lightchange(){
         element.classList.remove('fullblack');
         element.className = "fullwhite backlinks"
     });
-    popup2.className = "fullwhite"
-    popup2.classList.remove("whiteblack")
+
     popup1.classList.remove("a240black")
     console.log("added light mode")
     document.body.className = "blackwhite"
