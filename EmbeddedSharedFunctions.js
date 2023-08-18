@@ -56,6 +56,14 @@ function closewindow(){
     
 }
 
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+
 //light/dark transitioning
 const banner = document.getElementById("bannerimage")
 const resSearch = document.querySelectorAll(".SearchResC")
@@ -242,4 +250,4 @@ for (i = 0; i < titles.length; i++) {
 }
 
 
-
+});
