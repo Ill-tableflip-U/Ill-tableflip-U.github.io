@@ -1,4 +1,4 @@
-
+console.log("pagefunctions")
 var newDiv = document.createElement('div');
 newDiv.innerHTML = `
 
