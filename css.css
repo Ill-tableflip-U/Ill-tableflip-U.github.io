@@ -230,7 +230,7 @@ border-bottom: 0px solid blue;
 }
 #PageGlobalList{
   margin-left: 58%;
-  margin-top: -10px;
+  padding-top: 100px;
   border-radius: 10px;
   width: 500px;
   
