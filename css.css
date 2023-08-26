@@ -2,8 +2,11 @@
   font-family: "themefont";
   src: url("/font.ttf") format("truetype");
 }
-
-
+.maincontainer{
+  margin-left:15%;
+  margin-right:15%;
+  margin-top:200px
+}
 #bannerimage {
   width: 100.6%;
   position: fixed;
